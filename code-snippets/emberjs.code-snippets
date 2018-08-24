@@ -1,0 +1,200 @@
+{
+	"Ember: Component": {
+		"description": "Create an Ember Component",
+		"prefix": "emC",
+		"scope": "javascript",
+		"body": [
+			"import Component from '@ember/component';",
+			"",
+			"",
+			"/**",
+			"* @module shippo-frontend/${1:PATH}/component",
+			"* @name ${2:NAME}",
+			"* @class",
+			"* @extends {Ember.Component}",
+			"* @${3:public}",
+			"*/",
+			"export default Component.extend({",
+			"  $0",
+			"});"
+		],
+	},
+
+	"Ember: Route": {
+		"description": "Create an Ember Route",
+		"prefix": "emR",
+		"scope": "javascript",
+		"body": [
+			"import Route from '@ember/routing/route';",
+			"",
+			"",
+			"/**",
+			"* @module shippo-frontend/pods/${1:PATH}/route",
+			"* @name ${2:NAME}",
+			"* @class",
+			"* @extends {Ember.Route}",
+			"* @${3:public}",
+			"*/",
+			"export default Route.extend({",
+			"  $0",
+			"});"
+		],
+	},
+
+	"Ember: Service": {
+		"description": "Create an Ember Service",
+		"prefix": "emS",
+		"scope": "javascript",
+		"body": [
+			"import Service from '@ember/service';",
+			"",
+			"",
+			"/**",
+			"* @module shippo-frontend/services/${1:PATH}",
+			"* @name ${2:NAME}",
+			"* @class",
+			"* @extends {Ember.Service}",
+			"* @${3:public}",
+			"*/",
+			"export default Service.extend({",
+			"  $0",
+			"});"
+		],
+	},
+
+	"Ember: Controller": {
+		"description": "Create an Ember Controller",
+		"prefix": "emCR",
+		"scope": "javascript",
+		"body": [
+			"import Controller from '@ember/controller';",
+			"",
+			"",
+			"/**",
+			"* @module shippo-frontend/pods/${1:PATH}/controller",
+			"* @name ${2:NAME}",
+			"* @class",
+			"* @extends {Ember.Controller}",
+			"* @${3:public}",
+			"*/",
+			"export default Controller.extend({",
+			"  $0",
+			"});"
+		],
+	},
+
+	"Ember: define computed property": {
+		"description": "define a computed property",
+		"prefix": "dcp",
+		"scope": "javascript",
+		"body": [
+			"/**",
+			"* @property ${1:NAME}",
+			"* @type {ComputedProperty<${2:string}>}",
+			"* @public",
+			"*/",
+			"${1:NAME}: computed($3function() {",
+			"  $0",
+			"}),"
+		],
+	},
+
+	"Ember: define service": {
+		"description": "Define an Ember Service injection",
+		"prefix": "dserv",
+		"scope": "javascript",
+		"body": [
+			"/**",
+			"* @property ${1:NAME}",
+			"* @public",
+			"*/",
+			"${1:NAME}: service(${1:'service-name'})"
+		],
+	},
+
+	"Ember: super": {
+		"description": "call Ember's version of super",
+		"prefix": "emsup",
+		"scope": "javascript",
+		"body": [
+			"this._super(...arguments);"
+		],
+	},
+
+	"Ember: Actions": {
+		"description": "define actions",
+		"prefix": "emA",
+		"scope": "javascript",
+		"body": [
+			"actions: {",
+			"  /**",
+			"  * @method ${1:actionName}",
+			"  * @public",
+			"  */",
+			"  ${1:actionName}($2) {",
+			"    $0",
+			"  },",
+			"},",
+		],
+	},
+
+	"Ember Data: Model": {
+		"description": "Create an Ember Data Model",
+		"prefix": "emM",
+		"scope": "javascript",
+		"body": [
+			"import { Model, attr } from 'ember-data';",
+			"",
+			"",
+			"/**",
+			"* @module shippo-frontend/models/${1:PATH}",
+			"* @name ${2:NAME}",
+			"* @class",
+			"* @extends {DS.Model}",
+			"* @${3:public}",
+			"*/",
+			"export default Model.extend({",
+			"  $0",
+			"});"
+		],
+	},
+
+	"Ember Data: define attr": {
+		"description": "Define an Ember Data Attribute",
+		"prefix": "dattr",
+		"scope": "javascript",
+		"body": [
+			"/**",
+			"* @property ${1:NAME}",
+			"* @public",
+			"*/",
+			"${1:NAME}: attr(${2:'string'})"
+		],
+	},
+
+	"Ember Data: define hasMany": {
+		"description": "Define an Ember Data Has Many Relationship",
+		"prefix": "dmany",
+		"scope": "javascript",
+		"body": [
+			"/**",
+			"* @property ${1:NAME}",
+			"* @public",
+			"*/",
+			"${1:NAME}: hasMany(${1:Name}$2),"
+		],
+	},
+
+	"Ember Data: define belongsTo": {
+		"description": "Define an Ember Data Has One / Belongs To Relationship",
+		"prefix": "dbelong",
+		"scope": "javascript",
+		"body": [
+			"/**",
+			"* @property ${1:NAME}",
+			"* @public",
+			"*/",
+			"${1:NAME}: belongsTo(${1:Name}$2),"
+		],
+	},	
+}
